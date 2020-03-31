@@ -1,8 +1,8 @@
-# [Dracula] for [Kakoune]
+# Dracula for [Kakoune]
 
 > A dark theme for [Kakoune].
 
-![Screenshot](resources/screenshot.webp)
+![Screenshot](./screenshot.png)
 
 ## Install
 
