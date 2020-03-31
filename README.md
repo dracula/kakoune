@@ -21,7 +21,7 @@ This theme is maintained by the following person(s) and a bunch of [awesome cont
 
 ## License
 
-[Unlicense](UNLICENSE)
+[MIT License](./LICENSE)
 
 [Dracula]: https://draculatheme.com
 [Kakoune]: https://kakoune.org
