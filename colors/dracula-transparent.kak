@@ -1,5 +1,12 @@
+# Dracula theme for Kakoune
+# https://draculatheme.com/kakoune
+
+# Color palette
+# https://github.com/dracula/kakoune/blob/master/colors/dracula.kak
 colorscheme dracula
 
+# Transparency
+# Use the default terminal color.
 set-face global Default %opt{foreground}
 set-face global LineNumbers %opt{dimmed_background}
 set-face global LineNumberCursor "%opt{foreground}+b"

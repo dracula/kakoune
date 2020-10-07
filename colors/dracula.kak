@@ -1,7 +1,5 @@
 # Dracula theme for Kakoune
-# A dark theme for Kakoune
-# https://draculatheme.com
-# https://kakoune.org
+# https://draculatheme.com/kakoune
 
 # Color palette
 # https://github.com/dracula/dracula-theme#color-palette

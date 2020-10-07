@@ -1,4 +1,7 @@
-# Dracula for [Kakoune]
+# [Dracula] for [Kakoune]
+
+[Dracula]: https://draculatheme.com
+[Kakoune]: https://kakoune.org
 
 > A dark theme for [Kakoune].
 
@@ -8,9 +11,13 @@
 
 All instructions can be found at [draculatheme.com/kakoune].
 
+[draculatheme.com/kakoune]: https://draculatheme.com/kakoune/
+
 ## Team
 
 This theme is maintained by the following person(s) and a bunch of [awesome contributors][Contributors].
+
+[Contributors]: https://github.com/dracula/kakoune/graphs/contributors
 
 | [![alexherbo2/avatar_url]][alexherbo2] |
 |:--------------------------------------:|
@@ -22,8 +29,3 @@ This theme is maintained by the following person(s) and a bunch of [awesome cont
 ## License
 
 [MIT License](./LICENSE)
-
-[Dracula]: https://draculatheme.com
-[Kakoune]: https://kakoune.org
-[draculatheme.com/kakoune]: https://draculatheme.com/kakoune/
-[Contributors]: https://github.com/dracula/kakoune/graphs/contributors
