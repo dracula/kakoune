@@ -1,26 +1,52 @@
 # Dracula theme for Kakoune
 # https://draculatheme.com/kakoune
-
+#
 # Color palette
-# https://github.com/dracula/dracula-theme#color-palette
-declare-option str black 'rgb:282a36'
-declare-option str gray 'rgb:44475a'
-declare-option str white 'rgb:f8f8f2'
-declare-option str blue 'rgb:6272a4'
-declare-option str cyan 'rgb:8be9fd'
-declare-option str green 'rgb:50fa7b'
-declare-option str orange 'rgb:ffb86c'
-declare-option str pink 'rgb:ff79c6'
-declare-option str purple 'rgb:bd93f9'
+# https://spec.draculatheme.com
+#
+# Template
+# https://github.com/mawww/kakoune/blob/master/colors/default.kak
+#
+# Faces
+# https://github.com/mawww/kakoune/blob/master/doc/pages/faces.asciidoc
+
+# Color palette ────────────────────────────────────────────────────────────────
+
+# Standard
+declare-option str background 'rgb:282a36'
+declare-option str foreground 'rgb:f8f8f2'
+declare-option str selection 'rgb:44475a'
+declare-option str comment 'rgb:6272a4'
 declare-option str red 'rgb:ff5555'
+declare-option str orange 'rgb:ffb86c'
 declare-option str yellow 'rgb:f1fa8c'
+declare-option str green 'rgb:50fa7b'
+declare-option str purple 'rgb:bd93f9'
+declare-option str cyan 'rgb:8be9fd'
+declare-option str pink 'rgb:ff79c6'
 
-declare-option str background %opt{black}
-declare-option str dimmed_background %opt{gray}
-declare-option str foreground %opt{white}
+# ANSI
+declare-option str ansi_black 'rgb:21222c'
+declare-option str ansi_red 'rgb:ff5555'
+declare-option str ansi_green 'rgb:50fa7b'
+declare-option str ansi_yellow 'rgb:f1fa8c'
+declare-option str ansi_blue 'rgb:bd93f9'
+declare-option str ansi_magenta 'rgb:ff79c6'
+declare-option str ansi_cyan 'rgb:8be9fd'
+declare-option str ansi_white 'rgb:f8f8f2'
+declare-option str ansi_bright_black 'rgb:6272a4'
+declare-option str ansi_bright_red 'rgb:ff6e6e'
+declare-option str ansi_bright_green 'rgb:69ff94'
+declare-option str ansi_bright_yellow 'rgb:ffffa5'
+declare-option str ansi_bright_blue 'rgb:d6acff'
+declare-option str ansi_bright_magenta 'rgb:ff92df'
+declare-option str ansi_bright_cyan 'rgb:a4ffff'
+declare-option str ansi_bright_white 'rgb:ffffff'
 
-# Template: https://github.com/mawww/kakoune/blob/master/colors/default.kak
-# Documentation: https://github.com/mawww/kakoune/blob/master/doc/pages/faces.asciidoc
+# Non-standard
+declare-option str dimmed_background 'rgb:44475a'
+
+# Template ─────────────────────────────────────────────────────────────────────
 
 # For code
 set-face global value "%opt{green}"
@@ -47,30 +73,32 @@ set-face global bullet "%opt{green}"
 set-face global list "%opt{white}"
 
 # Builtin faces
-set-face global Default "%opt{white},%opt{black}"
-set-face global PrimarySelection "%opt{black},%opt{pink}+fg"
-set-face global SecondarySelection "%opt{black},%opt{purple}+fg"
-set-face global PrimaryCursor "%opt{black},%opt{cyan}+fg"
-set-face global SecondaryCursor "%opt{black},%opt{orange}+fg"
-set-face global PrimaryCursorEol "%opt{black},%opt{cyan}+fg"
-set-face global SecondaryCursorEol "%opt{black},%opt{orange}+fg"
-set-face global MenuForeground "%opt{blue},%opt{white}+b"
-set-face global MenuBackground "%opt{white},%opt{blue}"
+set-face global Default "%opt{foreground},%opt{background}"
+set-face global PrimarySelection "%opt{background},%opt{pink}+fg"
+set-face global SecondarySelection "%opt{background},%opt{purple}+fg"
+set-face global PrimaryCursor "%opt{background},%opt{cyan}+fg"
+set-face global SecondaryCursor "%opt{background},%opt{orange}+fg"
+set-face global PrimaryCursorEol "%opt{background},%opt{cyan}+fg"
+set-face global SecondaryCursorEol "%opt{background},%opt{orange}+fg"
+set-face global MenuForeground "%opt{blue},%opt{foreground}+b"
+set-face global MenuBackground "%opt{foreground},%opt{blue}"
 set-face global MenuInfo "%opt{cyan},%opt{blue}"
-set-face global Information "%opt{yellow},%opt{gray}"
-set-face global Error "%opt{black},%opt{red}"
-set-face global StatusLine "%opt{white},%opt{black}"
-set-face global StatusLineMode "%opt{black},%opt{green}"
-set-face global StatusLineInfo "%opt{purple},%opt{black}"
-set-face global StatusLineValue "%opt{orange},%opt{black}"
-set-face global StatusCursor "%opt{white},%opt{blue}"
-set-face global Prompt "%opt{black},%opt{green}"
-set-face global BufferPadding "%opt{gray},%opt{black}"
+set-face global Information "%opt{yellow},%opt{selection}"
+set-face global Error "%opt{background},%opt{red}"
+set-face global DiagnosticError "%opt{red}"
+set-face global DiagnosticWarning "%opt{yellow}"
+set-face global StatusLine "%opt{foreground},%opt{background}"
+set-face global StatusLineMode "%opt{background},%opt{green}"
+set-face global StatusLineInfo "%opt{purple},%opt{background}"
+set-face global StatusLineValue "%opt{orange},%opt{background}"
+set-face global StatusCursor "%opt{foreground},%opt{blue}"
+set-face global Prompt "%opt{background},%opt{green}"
+set-face global BufferPadding "%opt{selection},%opt{background}"
 
 # Builtin highlighter faces
-set-face global LineNumbers "%opt{gray},%opt{black}"
-set-face global LineNumberCursor "%opt{white},%opt{gray}+b"
-set-face global LineNumbersWrapped "%opt{gray},%opt{black}+i"
-set-face global MatchingChar "%opt{black},%opt{blue}"
-set-face global Whitespace "%opt{gray},%opt{black}+f"
+set-face global LineNumbers "%opt{selection},%opt{background}"
+set-face global LineNumberCursor "%opt{foreground},%opt{selection}+b"
+set-face global LineNumbersWrapped "%opt{selection},%opt{background}+i"
+set-face global MatchingChar "%opt{background},%opt{blue}"
+set-face global Whitespace "%opt{selection},%opt{background}+f"
 set-face global WrapMarker 'Whitespace'
